@@ -1,3 +1,20 @@
+R.I.P Flashcord died 8 july
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Flashcord developement has ceased indefinitely
 This project is now maintained by the community and newer versions are now based off the last "Ceres" version.
 
