@@ -1,0 +1,174 @@
+/**
+ * @name Flashcord custom background module with Clear Vision v7
+ * @version 1.0.1
+ * @description 
+ * @author Zap Gaming
+ * @source https://github.com/ZapGaming/Flashcord
+ */
+
+/* Import the Clear Vision v7 theme. */
+@import url("https://raw.githubusercontent.com/ClearVision/ClearVision-v7/master/ClearVision-v7.theme.css");
+
+/* --- Custom Background Styling --- */
+/*
+ * Applying your background image to the most general elements ensures it
+ * is present. We use !important to ensure this takes precedence.
+ */
+
+/* Target the main application wrapper. These are often the most stable selectors. */
+#app-mount,
+#root {
+    background-image: url("https://ik.imagekit.io/zapgaming/7e79413d8cc07200d360c3fef2a418ca.png?updatedAt=1750903241615") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    /* background-attachment: fixed !important; */ /* Uncomment for fixed background */
+}
+
+/* --- Increased Transparency for UI Panels --- */
+/*
+ * These rules aim to make common Discord UI panels (chat, sidebars, modals)
+ * fully transparent so your custom background is visible.
+ * Clear Vision may set its own backgrounds, so we use '!important' aggressively.
+ * If any panels still obscure the background, you'll need to inspect them
+ * using Discord's Developer Tools (Ctrl+Shift+I or Cmd+Option+I) to find their
+ * specific class names and add them to this list.
+ */
+
+/* General background elements */
+.background-3BWCU5, /* Common element for backgrounds in various panels */
+.background-1eBGPf  /* Another common background element */
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+}
+
+/* Chat area and message display */
+.chat-aiTA8c, /* Chat main area */
+.chatContent-a7KyAw, /* Container for chat messages */
+.messagesWrapper-hizUIA /* Wrapper around messages, often has a background */
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+}
+
+/* Server list (leftmost sidebar with guild icons) */
+.guilds-2AE41W, /* Container for guild icons */
+.sidebar-2Krh0Q /* General sidebar container, might include guild icons */
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+}
+
+/* Channel list (servers list) */
+.channels-2fTW2A, /* Container for channels within a server */
+.channel-TF2w5h /* Individual channel elements */
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+}
+
+/* Modals and Popups (Settings, User Profiles, etc.) */
+.layer-2aJwCB, /* General layer for modals */
+.modal-32cd36, /* Discord's modal styling */
+.modal-153rGv /* Another modal class */
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+}
+
+/* Additional common containers that might obscure backgrounds */
+.app-1qkfx9, /* General app container, often used in themes */
+.layers-3cwDM-, /* A higher-level container for Discord's UI layers */
+.base-XXXXXX, /* Placeholder - replace with actual if you find one */
+.appMount-2TJ5G0 /* Placeholder - replace with actual if you find one */
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    background: none !important;
+}
+
+
+
+
+EXTRAS
+
+#vc-spotify-player {
+    --blur-amount: 4px; 
+    --normal-bg-colour: var(--bg-overlay-floating, var(--background-base-low, var(--background-secondary-alt)));
+
+    position: relative;
+    background: linear-gradient(to bottom, transparent 0%, var(--normal-bg-colour) 100%) !important;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    > * {
+      filter: drop-shadow(0 0 10px var(--normal-bg-colour));
+    }
+}
+#vc-spotify-player:hover {
+    --blur-amount: 0px;
+}
+#vc-spotify-player::before,
+#vc-spotify-player::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-out;
+}
+#vc-spotify-player::before {
+    background: var(--vc-spotify-track-image);
+    background-position: center top; 
+    background-size: cover; 
+    opacity: 0.5;
+}
+#vc-spotify-player:hover::before {
+    opacity: 0.7;
+}
+#vc-spotify-player::after {
+    backdrop-filter: blur(var(--blur-amount));
+}
+#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"] {
+    background-color: white !important;
+    background: var(--vc-spotify-track-image);
+    background-size: 1px 100%;
+}
+#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"]::before {
+    content: "";
+    position: fixed;
+    height: inherit;
+    width: inherit;
+    top: inherit;
+    left: inherit;
+    border-radius: 4px 0 0 4px;
+    backdrop-filter: blur(10px) saturate(4) brightness(1.6);
+}
+
+
+
+
+
+
+ /* USER POPOUT BACKGROUND */
+  --user-popout-image: url("https://ik.imagekit.io/zapgaming/7e79413d8cc07200d360c3fef2a418ca.png?updatedAt=1750903241615"); /* user popout background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-popout-position: var(--background-position); /* user popout position [default: var(--background-position)] */
+  --user-popout-size: var(--background-size); /* user popout size (px) [default: var(--background-size)] */
+  --user-popout-attachment: var(--background-attachment); /* user popout background attachment [default: var(--background-attachment)] */
+  --user-popout-filter: var(--background-filter); /* user popout background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: url("https://ik.imagekit.io/zapgaming/7e79413d8cc07200d360c3fef2a418ca.png?updatedAt=1750903241615"); /* user modal background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-modal-position: var(--background-position); /* user modal position [default: var(--background-position)] */
+  --user-modal-size: var(--background-size); /* user modal size (px) [default: var(--background-size)] */
+  --user-modal-attachment: var(--background-attachment); /* user modal background attachment [default: var(--background-attachment)] */
+  --user-modal-filter: var(--background-filter); /* user modal background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* HOME ICON */
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg); /* home button icon (link must be HTTPS) [default: url(https://clearvision.github.io/icons/discord.svg)]*/
+  --home-size: cover; /* home button icon size (px) [default:cover] */
