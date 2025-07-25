@@ -1,5 +1,5 @@
-<h1 align="center">Hiya, Im Zap Gaming</h1>
-<h3 align="center">This is a fork of Flashcord Ceres, with bug fixes and added features</h3>
+<h1 align="center">Hiya, this is Flashcord</h1>
+<h3 align="center">THE WORLDS MOST COMPLEX DISCORD THEME</h3>
 
 <h3 align="left">Written in:</h3>
 <p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> </p>
