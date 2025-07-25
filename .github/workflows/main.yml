@@ -17,14 +17,6 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          template: repository
-          filename: metrics.repository.svg
-          user: zapgaming
-          repo: Flashcord
-          plugin_lines: yes
-          plugin_followup: yes
-          plugin_projects: yes
-          plugin_projects_repositories: zapgaming/Flashcord/Ceres_SID.css
 
 
 
