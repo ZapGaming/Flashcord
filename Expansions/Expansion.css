@@ -16,7 +16,7 @@
     --font-headline: var(--Flashcord-Font);
     --FlashCore-Branch: "Flashcord Ceres"; /* For branding, sid.css used "ALP FlashCord" */
     --FlashCore-Channel: "DEV_250208"; /* YOUR CUSTOM TEXT Part 2 */
-    --FlashCore-Version: "DEV_250208"; /* Or your version */
+    --FlashCore-Version: ""; /* Or your version */
     --Q: '"'; 
 }
 
