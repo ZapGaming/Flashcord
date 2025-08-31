@@ -22,10 +22,12 @@
 
 
 
-R.I.P Flashcord died 8 july
+R.I.P Flashcord died 8/7/2025
 
 
 # Flashcord developement has ceased indefinitely
 This project is now maintained by the community and newer versions are now based off the last "Ceres" version.
+
+## My new custom version are available at https://github.com/ZapGaming/Grasscord
 
 ##### [The source for the default background for the "CBM" mode in Ceres is available here.](https://www.pixiv.net/en/artworks/115204201)
