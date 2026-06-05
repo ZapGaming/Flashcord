@@ -1,3 +1,10 @@
+this is out of date and broken use https://github.com/ZapGaming/Gisono instead
+
+
+
+
+
+
 <h1 align="center">Hiya, this is Flashcord</h1>
 <h3 align="center">THE WORLDS MOST COMPLEX DISCORD THEME</h3>
 
